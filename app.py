@@ -6,7 +6,9 @@ import os
 
 load_dotenv()
 
-client = OpenAI()
+client = OpenAI(
+    api_key=os.getenv("OPENAI_API_KEY")
+)
 
 
 st.write("The red flag jobs app")
